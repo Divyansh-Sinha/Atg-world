@@ -1,0 +1,469 @@
+.home{
+    max-width: 100%;
+    
+}
+
+.coverImage{
+    position: relative;
+    
+    
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+   max-width: 100%;
+   height: 500px;
+}
+
+.coverImage img{
+    filter: brightness(50%);
+    width: 100%;
+    height: 68rem;
+    object-fit: cover;
+    height: 500px;
+}
+.coverImage button{
+    display: none;
+}
+
+.coverText{
+    position: absolute;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    top: 42vh;
+    left: 15vw;
+}
+
+.coverText h2{
+    font-size: 3.8rem;
+    line-height: 46.8px;
+}
+.coverText p{
+    
+    font-size: 1.8rem;
+    /* font-style: normal; */
+    font-weight: 200;
+    line-height: 50px;
+    
+    text-align: left;
+
+}
+
+
+/* Body Container */
+
+.bodyContainer{
+    max-width: 100%;    
+    margin: 0 20rem;
+    margin-top: 2.7rem;
+}
+
+.bodyHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 2rem;
+}   
+
+.filter{
+    font-style: normal;
+font-weight: normal;
+
+line-height: 21px;
+/* identical to box height */
+color: #8A8A8A;
+padding: 0 2rem;
+cursor: pointer;
+}
+
+.filter:first-child{
+    padding-left: 0;
+}
+
+.post{
+   padding: 0.89rem 0.9rem;  
+    background: #EDEEF0;
+    border-radius: 4px;
+    border: none;
+    font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+margin-right: 16px;
+cursor: pointer;
+color: #000000;
+}
+
+
+.group{
+    padding: 0.89rem 0.9rem;
+background: #2F6CE5;
+border-radius: 4px;
+border: none;
+    font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+
+cursor: pointer;
+color: #EDEEF0;
+}
+
+.activeGroup{
+    padding: 0.7rem 0.9rem;
+background: #FFFFFF;
+border: 0.8px solid #989899;
+box-sizing: border-box;
+border-radius: 4px;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 19px;
+/* identical to box height */
+
+cursor: pointer;
+color: #6A6A6B;
+}
+
+.activeGroup > img{
+    position: relative;
+    width: 16.5px;
+    height: 16.5px;
+    top: 3px;
+}
+
+.headMobile{
+    display: none;
+}
+
+@media all and (max-width: 1224px)
+{
+    .bodyHead{
+        font-size: 1.5rem;
+    }
+
+    .post,.group{
+        padding: 0.8rem 0.89rem;
+        font-size: 10px;
+    }
+
+    
+}
+
+@media all and (max-width: 1081px)
+{
+    .bodyHead{
+        font-size: 1.2rem;
+        
+    }
+
+    .filter{
+        padding: 0 1.5rem;
+    }
+
+    .post,.group{
+        padding: 0.5rem 0.7rem;
+        font-size: 10px;
+    }
+
+    .group svg{
+        height: 10px;
+    }
+
+    
+}
+
+
+.bodyContent{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contentLeft{
+    width: 68%;
+}
+
+.contentRight{
+   width: 21%;
+}
+
+
+.location{
+    
+    display: flex;
+    font-size: 20px;
+    padding: 5rem 0;
+    padding-bottom: 1.1rem;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.location input,
+.location input:focus-visible
+{
+    font-size: 12px;
+    border: none;
+    outline: none;
+}
+
+.location .fa-pencil{
+    justify-self: flex-end;
+}
+
+
+
+.line  {
+    
+height: 0px;
+
+
+border: 0.4px solid #B8B8B8;
+}
+
+.locDes{
+    display: flex;
+    margin-top: 32px;
+    align-items: flex-start;
+}
+
+.locDes p {
+    font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+margin-left: 8.33px;
+color: #000000;
+
+opacity: 0.5;
+}
+
+@media all and (max-width: 1225px)
+{
+    .location{
+        font-size: 16px;
+    }
+
+    .location input{
+        width: 70%;
+    }
+
+    .contentLeft{
+        width: 66%;
+    }
+
+    .contentRight{
+        width: 23%;
+    }
+}
+
+@media all and (max-width: 1127px)
+{
+    .location{
+        font-size: 14px;
+    }
+
+    .location input{
+        font-size: 10px;
+    }
+}
+
+
+
+@media all and (max-width: 961px)
+{
+    .bodyContainer{
+        margin: 0 15rem;
+        margin-top: 2.7rem;
+    }
+}
+
+@media all and (max-width: 861px)
+{
+    .bodyContainer{
+        margin: 0 12rem;
+        margin-top: 2.7rem;
+    }
+}
+@media all and (max-width: 801px)
+{
+    .bodyContainer{
+        margin: 0 9rem;
+        margin-top: 2.7rem;
+    }
+}
+
+
+
+
+
+
+/* Mobile View Pixel 741 */
+
+@media all and (max-width: 741px)
+{
+
+    .bodyContainer{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .coverImage{
+        height:300px;
+    }
+
+    .coverImage img{
+        height: 300px;
+        object-fit: fill;
+    }
+
+    .coverImage button{
+        display: block;
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        border: 1.5px solid #FFFFFF;
+        
+        border-radius: 4px;
+        background: transparent;
+        padding: 0.7rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height */
+        cursor: pointer;
+
+        color: #FFFFFF;
+
+    }
+
+    .coverText{
+        top: 30vh;
+        left: 7vw;
+    }
+
+    .coverText h2{
+        font-size: 2.5rem;
+        line-height: 36.8px;
+        text-align: left;
+    }
+
+    .coverText p{
+    
+        font-size: 1.5rem;
+        /* font-style: normal; */
+        font-weight: normal;
+        line-height: 40px;
+        
+        text-align: left;    
+    }
+
+    .bodyHead{
+        border: none;
+        padding: 0;
+        margin: 0 2rem;
+    }
+
+    .headLeft,.headRight{
+        display: none;
+    }
+
+    .headMobile{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .headMobile p{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+
+        color: #212529;
+    }
+
+    .headMobile div{
+       display: flex;
+       align-items: center;
+        width: 100px;
+        height: 32px;
+       padding: 0 5px;
+
+        background: #F1F3F5;
+        border-radius: 4px;
+
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 17px;
+        
+
+
+        color: #212529;
+    }
+
+    .headMobile div select{
+        background: transparent;
+        border: none;
+        width: 75%;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        margin-top: 2px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .contentLeft{
+        width: 100%;
+    }
+
+    .contentRight{
+        display: none;
+    }
+
+    
+}
+
+@media all and (max-width: 700px)
+{
+    .coverImage{
+        height:268.18px;
+    }
+
+    .coverImage img{
+        height: 268.18px;
+        
+    }
+
+    .coverText{
+        top: 25vh;
+        left: 3vw;
+    }
+
+    .coverText h2{
+        font-size: 2.5rem;
+        line-height: 16.8px;
+        text-align: left;
+    }
+
+    .coverText p{
+    
+        font-size: 1.5rem;
+        /* font-style: normal; */
+        font-weight: normal;
+        line-height: 40px;
+        
+        text-align: left;    
+    }
+}
