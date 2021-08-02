@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './Home/Home';
 
 function App() {
+
+  const [signIn,setSignIn] = useState(true);
+
   return (
     <div className="App">
-      <Navbar/>
-      <Home/>
+      <Navbar signIn={signIn} setSignIn= {setSignIn}/>
+      <Home signIn={signIn} setSignIn= {setSignIn}/>
     </div>
   );
 }

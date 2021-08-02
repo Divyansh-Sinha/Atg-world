@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 
-const Card2 = () => {
+const Card2 = ({data}) => {
 
     const [IsOpen, setIsOpen] = useState(false);
     
@@ -10,9 +10,9 @@ const Card2 = () => {
     return ( 
         <Card>
             <CardImage>
-                <img src={require("../../images/Car.png").default} alt="Hello" />
+                <img src={data.img} alt="Hello" />
             </CardImage>
-            <CardTag> <span>🗓️</span> Meetup</CardTag>
+            <CardTag> <span>{data.icon}</span> {data.tag}</CardTag>
             <CardHead>
                 <p>Finance & Investment Elite Social Mixer @Lujiazui</p>
                 <HeadMenu onClick={()=>setIsOpen(!IsOpen)}>
@@ -46,8 +46,8 @@ const Card2 = () => {
             </CardBody>
             <CardFooter>
                 <Item1>
-                    <img src={require("../../images/Sarthak.png").default} alt="" />
-                    <p>Sarthak Kamra</p>
+                <img src={data.face} alt="" />
+                    <p>{data.name}</p>
                 </Item1>
                 <Item2>
                     <icon>

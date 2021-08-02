@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Card1 from '../components/Cards/Card1';
 import Card2 from '../components/Cards/Card2';
+import { card1, DATA } from './Card1';
 import './Home.css'
 
-const Home = () => {
+const Home = ({signIn, setSignIn}) => {
 
     const [active,setActive] = useState(0);
-    const [signIn,setSignIn] = useState(false);
+    
+  
 
     useEffect(()=>{
 
@@ -20,6 +22,22 @@ const Home = () => {
         arr[active].style.color = "#000000";
 
     },[active])
+
+
+    const followed = (id)=>{
+        let f = document.querySelectorAll(".follow");
+       
+        if(f[id].classList.contains("followed"))
+        {
+            f[id].classList.remove("followed");
+            f[id].innerHTML = "Follow";
+        }
+        else{
+            f[id].classList.add("followed");
+            f[id].innerHTML = "Followed";
+        }
+        
+    }
 
     
     return ( 
@@ -72,13 +90,22 @@ const Home = () => {
                 <div className="bodyContent">
 
                     <div className="contentLeft">
-                    <Card1></Card1>
-                     <Card2></Card2>
+                    {/* <Card1 ></Card1> */}
+                    {DATA.map((item,index)=>{
+                        return  (
+                            item.card === "1"? 
+                            <Card1 key={index} data = {item}></Card1>:
+                            <Card2  key={index} data = {item}></Card2>
+                        )
+                    })}
+
+                    
+                     
                     </div>
                     <div className="contentRight">
                         <div className="location">
                             <i style={{marginRight: '10px'}} className="fa fa-map-marker"></i>
-                           <input type="text" placeholder="Enter Your Location"/>
+                           <input type="text" placeholder="Enter Your Location" disabled={signIn ? false: true}/>
                            <i style={{marginLeft: '10px'}} className="fa fa-pencil" aria-hidden="true"></i>   
                                                    
                         </div>
@@ -101,7 +128,22 @@ const Home = () => {
                             <GrMember>
                                 <img src={require("../images/leisure.png").default} alt="" />
                                 <p>Leisure</p>
-                                <button>Follow</button>
+                                <button className="follow" onClick={()=>followed(0)}>Follow</button>
+                            </GrMember>
+                            <GrMember>
+                                <img src={require("../images/activism.png").default} alt="" />
+                                <p>Activism</p>
+                                <button className="follow" onClick={()=>followed(1)}>Follow</button>
+                            </GrMember>
+                            <GrMember>
+                                <img src={require("../images/mba.png").default} alt="" />
+                                <p>MBA</p>
+                                <button className="follow" onClick={()=>followed(2)}>Follow</button>
+                            </GrMember>
+                            <GrMember>
+                                <img src={require("../images/philo.png").default} alt="" />
+                                <p>Philosophy</p>
+                                <button className="follow" onClick={()=>followed(3)}>Follow</button>
                             </GrMember>
 
                         </Groups>
@@ -176,7 +218,7 @@ const GrMember = styled.div`
         background: #EDEEF0;
         border-radius: 14px;
 
-
+        cursor: pointer;
         font-style: normal;
         font-weight: normal;
         font-size: 12px;

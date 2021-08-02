@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 
-const Card1 = () => {
+const Card1 = ({data}) => {
 
     const [IsOpen, setIsOpen] = useState(false);
    
+ 
     
     return ( 
         <Card>
             <CardImage>
-                <img src={require("../../images/Rectangle 5.png").default} alt="Hello" />
+                <img src={data.img} alt="Hello" />
             </CardImage>
-            <CardTag> <span>✍️</span>   Article</CardTag>
+            <CardTag> <span>{data.icon}</span>   {data.tag}</CardTag>
             <CardHead>
                 <p>What if famous brands had regular fonts? Meet RegulaBrands!</p>
                 <HeadMenu onClick={()=>setIsOpen(!IsOpen)}>
@@ -32,8 +33,8 @@ const Card1 = () => {
             </CardBody>
             <CardFooter>
                 <Item1>
-                    <img src={require("../../images/Sarthak.png").default} alt="" />
-                    <p>Sarthak Kamra</p>
+                    <img src={data.face} alt="" />
+                    <p>{data.name}</p>
                 </Item1>
                 <Item2>
                     <icon>

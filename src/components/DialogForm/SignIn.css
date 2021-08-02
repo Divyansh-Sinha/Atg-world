@@ -1,0 +1,221 @@
+.signinCont{
+  width: 100%;
+
+background: #FFFFFF;
+box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+}
+
+.signHeader{
+    height: 50px;
+
+
+background: #EFFFF4;
+border-radius: 8px 8px 0px 0px;
+}
+
+.signHeader p{
+    padding: 17px 58px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    text-align: center;
+
+    color: #008A45;
+}
+
+.signinContainer{
+    display: flex;
+    margin: 20px 24px;
+}
+.left,.right{
+    width: 50%;
+    padding-bottom: 26px;
+}
+
+
+
+.left h2{
+    margin-bottom: 12px;
+    font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 31px;
+
+color: #000000;
+}
+
+input[type=text] {
+    
+    transition: ease-in-out, width .35s ease-in-out;
+    width: 50%;
+    height: 36px;
+    outline: none;
+
+    background: #F7F8FA;
+    border: 1px solid #D9D9DB;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0px 0px;
+  }
+
+  input[type=email]
+  {
+    width: 100%;
+    height: 36px;
+    outline: none;
+
+    background: #F7F8FA;
+    border: 1px solid #D9D9DB;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0px 0px;
+  }
+
+  input[type=password]{
+    width: 100%;
+    height: 36px;
+    outline: none;
+
+    background: #F7F8FA;
+    border: 1px solid #D9D9DB;
+    box-sizing: border-box;
+    border-radius: 2px 2px 0px 0px;
+  }
+
+  .createAcc button{
+      cursor: pointer;
+      margin-top: 15px;
+    padding: 7px 0;
+    width: 100%;
+    background: #2F6CE5;
+border-radius: 20px;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+text-align: center;
+border: none;
+outline: none;
+color: #FFFFFF;
+  }
+
+  .facebook{
+      margin-top: 15px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    background: #FFFFFF;
+    padding: 5px 0;
+    border: 0.6px solid #D9D9DB;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+
+  .facebook span{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    margin-left: 10px;
+    
+    color: #000000;
+  }
+
+  .google{
+    margin-top: 6px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  background: #FFFFFF;
+  padding: 5px 0;
+  border: 0.6px solid #D9D9DB;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.google span{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  margin-left: 10px;
+  
+  color: #000000;
+}
+
+.sign button{
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    padding: 7px 0;
+    background: #2F6CE5;
+border-radius: 20px;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+text-align: center;
+border: none;
+outline: none;
+color: #FFFFFF;
+}
+
+.right h4{
+    margin-top: 6px;
+    text-align: end;
+    font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 17px;
+/* identical to box height */
+
+text-align: right;
+
+color: #3D3D3D;
+    
+}
+
+.right img{
+    width: 100%;
+    height: 86%;
+}
+
+.right p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 9px;
+    line-height: 16px;
+    /* identical to box height, or 145% */
+
+    text-align: end;
+    letter-spacing: -0.008em;
+
+    color: #000000;
+
+    opacity: 0.6;
+}
+
+
+.fade{
+    display: none;
+}
+
+.signedin{
+  width: 100%;
+  text-align: center;
+  background:  lightgreen;
+  padding: 8rem;
+  color: white;
+  margin: 2rem;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+}

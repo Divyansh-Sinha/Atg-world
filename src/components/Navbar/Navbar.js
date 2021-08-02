@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import styled from "styled-components";
+import CustomizedDialogs from '../DialogForm/DialogForm';
 
-const Navbar = () => {
+import SignIn from '../DialogForm/SignIn';
+
+const Navbar = ({signIn, setSignIn}) => {
+
+  const [IsOpen, setIsOpen] = useState(false);
+
     return ( 
         <>
     
@@ -47,9 +53,39 @@ const Navbar = () => {
             <span className="icon"><i className="fa fa-search" aria-hidden="true"></i></span>
             <input className="iconText" placeholder="Search for your favorite groups in ATG"/>
         </Search>
-        <Create>
-            Create Account.<span style={{color: 'blue'}}>It's free!</span>
-        </Create>
+          
+        
+        {
+          signIn ? 
+          <SignedIn>
+            <img src={require("../../images/Joseph.png").default} alt="" />
+            <p>Siddharth Goyal</p>
+
+            <SignedMenu onClick={()=>setIsOpen(!IsOpen)}>
+            <svg viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.416748 0.166626L5.00008 4.74996L9.58341 0.166626H0.416748Z" fill="black"/>
+            </svg>
+
+            <div style={{display: (IsOpen ? "flex" : "none")}}>
+              <span onClick={()=>setSignIn(!signIn)}>Sign Out</span>
+              <span>Settings</span>
+            </div>
+
+            </SignedMenu>
+
+          </SignedIn>           
+          : 
+          <CustomizedDialogs >
+          <SignIn signIn={signIn} setSignIn= {setSignIn}>                
+          </SignIn>
+        </CustomizedDialogs>
+        }
+          
+
+           
+
+           
+        
 
         <Logo2>
 
@@ -81,6 +117,64 @@ const Navbar = () => {
 }
  
 export default Navbar;
+
+const SignedIn = styled.div`
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+
+    img{
+      width: 36px;
+      height: 36px;
+    }
+
+    p{
+      margin-left:12px;
+      margin-right:10.42px;
+      font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    color: #000000;
+    }
+
+    @media (max-width: 741px)
+{
+  display: none;
+}
+  
+`;
+
+const SignedMenu = styled.div`
+
+svg{
+  width: 9.17px;
+  height: 4.58px ;
+  cursor: pointer;
+}
+
+    div{
+      z-index:2;
+      position: absolute;
+      top:50px;
+      right: 45px;
+      flex-direction: column;     
+      background: #FFFFFF;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16), 0px 0px 2px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+
+      span{
+        padding: 1rem;
+        cursor: pointer;
+      }
+
+    }
+
+`;
 
 const Nav = styled.div`
   /* position: absolute; */
@@ -186,9 +280,9 @@ const Create = styled.div`
     }
 
     @media (max-width: 741px)
-{
-  display: none;
-}
+    {
+      display: none;
+    }
 `;
 
 const Logo2 = styled.div`
