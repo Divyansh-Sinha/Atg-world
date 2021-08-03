@@ -93,7 +93,7 @@ function SignIn({signIn, setSignIn}) {
                         <input type="email" placeholder="Email"/>
                         <input type="password" placeholder="Password"/>
                         <input type="password" placeholder="Confirm Password"/>
-                        <button>Create Account</button>
+                        <button>Create Account</button> <p className="create phone" onClick={()=>setCreate(!create)}> or, Sign IN</p>
                         <div className="facebook">
                             <img src={require("../../images/facebook.png").default} alt="" />
                             <span>Sign Up with Facebook</span>
@@ -113,6 +113,9 @@ function SignIn({signIn, setSignIn}) {
                         <input id="pass" type="password" placeholder="Password" onChange={setPass}/>
                         
                         <button onClick={()=>check()}>Sign In</button>
+                        <p className="signin phone" onClick={()=>setCreate(!create)}> or, Create Account</p>
+
+                        
                         <div className="facebook">
                             <img src={require("../../images/facebook.png").default} alt="" />
                             <span>Sign In with Facebook</span>
@@ -136,6 +139,10 @@ function SignIn({signIn, setSignIn}) {
                 <div className="signedin fade">
                     <h1>Sign In Successful</h1>
                 </div>
+                
+               
+               
+
             </div>
             
         </div>

@@ -67,6 +67,15 @@ export default function CustomizedDialogs({children}) {
       <Create  className="btn" onClick={handleClickOpen}>
       Create Account.<span style={{color: 'blue'}}>It's free!</span>
       </Create>
+
+      <PhoneView onClick={handleClickOpen}>
+
+      <Icon className="fa fa-pencil " aria-hidden="true"></Icon>   
+      
+
+      </PhoneView>
+
+
       <Dialog aria-labelledby="customized-dialog-title" open={open}  onClose={handleClose}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
           
@@ -103,4 +112,33 @@ const Create = styled.div`
     {
       display: none;
     }
+`;
+
+const PhoneView = styled.div`
+    display: none;
+    position: fixed;
+    bottom:20px;
+    z-index: 3;
+
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18), 0px 0px 2px rgba(0, 0, 0, 0.08);
+
+    svg{
+      color: black;
+    }
+
+    @media(max-width: 741px){
+        display: block;
+    }
+
+`;
+
+const Icon = styled.div`
+    font-size: 2.4rem;
+    margin-top:12px;
+    color: white; 
+
 `;
