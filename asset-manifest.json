@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Atg-world/static/css/main.5a20591d.chunk.css",
+    "main.js": "/Atg-world/static/js/main.78ad9969.chunk.js",
+    "main.js.map": "/Atg-world/static/js/main.78ad9969.chunk.js.map",
+    "runtime-main.js": "/Atg-world/static/js/runtime-main.8bacec74.js",
+    "runtime-main.js.map": "/Atg-world/static/js/runtime-main.8bacec74.js.map",
+    "static/js/2.9941598a.chunk.js": "/Atg-world/static/js/2.9941598a.chunk.js",
+    "static/js/2.9941598a.chunk.js.map": "/Atg-world/static/js/2.9941598a.chunk.js.map",
+    "static/js/3.4e9298f9.chunk.js": "/Atg-world/static/js/3.4e9298f9.chunk.js",
+    "static/js/3.4e9298f9.chunk.js.map": "/Atg-world/static/js/3.4e9298f9.chunk.js.map",
+    "index.html": "/Atg-world/index.html",
+    "static/css/main.5a20591d.chunk.css.map": "/Atg-world/static/css/main.5a20591d.chunk.css.map",
+    "static/js/2.9941598a.chunk.js.LICENSE.txt": "/Atg-world/static/js/2.9941598a.chunk.js.LICENSE.txt",
+    "static/media/Car.png": "/Atg-world/static/media/Car.50890ad8.png",
+    "static/media/Group 3.png": "/Atg-world/static/media/Group 3.ea230308.png",
+    "static/media/Joseph.png": "/Atg-world/static/media/Joseph.3e769626.png",
+    "static/media/Rectangle 2.png": "/Atg-world/static/media/Rectangle 2.1a4fa905.png",
+    "static/media/Rectangle 5.png": "/Atg-world/static/media/Rectangle 5.bb1ef829.png",
+    "static/media/Ronal.png": "/Atg-world/static/media/Ronal.5481681d.png",
+    "static/media/Sarah.png": "/Atg-world/static/media/Sarah.0860d94c.png",
+    "static/media/Sarthak.png": "/Atg-world/static/media/Sarthak.7db8ce96.png",
+    "static/media/wood.png": "/Atg-world/static/media/wood.f73393b1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8bacec74.js",
+    "static/js/2.9941598a.chunk.js",
+    "static/css/main.5a20591d.chunk.css",
+    "static/js/main.78ad9969.chunk.js"
+  ]
+}
