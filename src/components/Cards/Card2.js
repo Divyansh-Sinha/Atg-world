@@ -10,7 +10,7 @@ const Card2 = ({data}) => {
     return ( 
         <Card>
             <CardImage>
-                <img src={data.img} alt="Hello" />
+                <img src={data.img} alt="" />
             </CardImage>
             <CardTag> <span>{data.icon}</span> {data.tag}</CardTag>
             <CardHead>

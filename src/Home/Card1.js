@@ -26,4 +26,13 @@ export const DATA = [
         name: "Ronal Jone",
         card: "2",
     },
+    {
+        id:3,
+        img: '',
+        icon: "💼️",
+        tag: "Job",
+        face: require("../images/Joseph.png").default,
+        name: "Joseph Gray",
+        card: "2",
+    },
 ]
