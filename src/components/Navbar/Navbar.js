@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import styled from "styled-components";
-import CustomizedDialogs from '../DialogForm/DialogForm';
+
 
 import SignIn from '../DialogForm/SignIn';
 
 const Navbar = ({signIn, setSignIn}) => {
 
   const [IsOpen, setIsOpen] = useState(false);
+  const [click,setClick] = useState(false);
+
+  const signOut = ()=>{
+    setSignIn(!signIn);
+    setClick(false);
+  }
+
 
     return ( 
         <>
@@ -67,7 +74,7 @@ const Navbar = ({signIn, setSignIn}) => {
             </svg>
 
             <div style={{display: (IsOpen ? "flex" : "none")}}>
-              <span onClick={()=>setSignIn(!signIn)}>Sign Out</span>
+              <span onClick={signOut}>Sign Out</span>
               <span>Settings</span>
             </div>
 
@@ -75,10 +82,13 @@ const Navbar = ({signIn, setSignIn}) => {
 
           </SignedIn>           
           : 
-          <CustomizedDialogs >
-          <SignIn signIn={signIn} setSignIn= {setSignIn}>                
-          </SignIn>
-        </CustomizedDialogs>
+          
+          <Create>
+          Create Account.<span style={{color: 'blue'}} onClick={()=>setClick(!click)}>It's free!</span>
+          <SignIn signIn={signIn} setSignIn={setSignIn} click={click} setClick={setClick}></SignIn>
+          </Create>
+
+
         }
           
 
@@ -106,6 +116,11 @@ const Navbar = ({signIn, setSignIn}) => {
 
         </Logo2>
 
+        <Logo3>
+          <img onClick={()=>setClick(!click)} src={require("../../images/pen.png").default} alt="" />
+          <SignIn signIn={signIn} setSignIn={setSignIn} click={click} setClick={setClick}></SignIn>
+        </Logo3>
+
       </Nav>
       
      
@@ -117,6 +132,8 @@ const Navbar = ({signIn, setSignIn}) => {
 }
  
 export default Navbar;
+
+
 
 const SignedIn = styled.div`
     display: flex;
@@ -261,11 +278,10 @@ const Search = styled.div`
 }
 `;
 
-
 const Create = styled.div`
     
     height: 21px;
-  
+    cursor: pointer;
     font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: 500;
@@ -318,9 +334,24 @@ const Logo2 = styled.div`
     
     display: flex;
 
-  }
+  }  
 
-  
 
+`;
+
+const Logo3 = styled.div`
+    position:fixed;
+    bottom:0;
+    z-index:1;
+    display: none;
+
+    @media (max-width: 741px){
+      display: block;
+    }
+
+    img{
+      width: 54px;
+    height: 54px;
+    }
 
 `;

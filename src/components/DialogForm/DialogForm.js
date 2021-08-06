@@ -64,9 +64,7 @@ export default function CustomizedDialogs({children}) {
 
   return (
     <div>
-      <Create  className="btn" onClick={handleClickOpen}>
-      Create Account.<span style={{color: 'blue'}}>It's free!</span>
-      </Create>
+     
 
       <PhoneView onClick={handleClickOpen}>
 
@@ -90,29 +88,7 @@ export default function CustomizedDialogs({children}) {
 }
 
 
-const Create = styled.div`
-    
-    height: 21px;
-    cursor: pointer;
-    font-family: IBM Plex Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    /* identical to box height */
-    color: #2E2E2E;
-    text-align: right;
 
-    @media (max-width: 1100px)
-    {
-      font-size: 14px;
-    }
-
-    @media (max-width: 741px)
-    {
-      display: none;
-    }
-`;
 
 const PhoneView = styled.div`
     display: none;
